@@ -9,5 +9,10 @@ namespace WebServer.Server.Http
 
         public HttpHeaderCollection() 
             => this.headers = new Dictionary<string, HttpHeader>();
+    
+        public void Add(HttpHeader header)
+        {
+            this.headers.Add(header.Name, header);
+        }
     }
 }
